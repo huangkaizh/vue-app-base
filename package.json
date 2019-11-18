@@ -4,7 +4,7 @@
   "description": "webpack4+vue+less+eslint+vscode 脚手架工程",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.dev.js --open",
+    "dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js && node pack.js",
     "lint": "eslint --ext .js,.vue src",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -47,6 +47,8 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.3",
+    "vuex": "^3.1.2"
   }
 }

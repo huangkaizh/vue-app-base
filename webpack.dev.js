@@ -9,6 +9,14 @@ function resolve (dir) {
 module.exports = merge(common, {
   mode: 'development', // 开发环境不压缩代码，加快编译速度
   devtool: 'source-map', // 提供源码映射文件，以便于调试
+  devServer: {
+    host: '0.0.0.0',
+    proxy: {
+      '/api': {
+        target: 'http://172.16.8.102:6080' // 后台接口代理设置
+      }
+    }
+  },
   module: {
     rules: [
       {
